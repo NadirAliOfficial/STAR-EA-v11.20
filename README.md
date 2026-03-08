@@ -55,4 +55,4 @@ STAR EA implements a 12-scenario market classification engine that adapts entry 
 ## Developer
 
 Built and optimized by **Nadir Ali Khan** — [TEAM NAK](https://github.com/NadirAliOffical)
-<!-- updated: 2026-01-12-04 -->
+<!-- updated: 2026-03-08-02 -->
