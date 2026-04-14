@@ -1,0 +1,6 @@
+# Images (client attachments, not part of codebase)
+*.jpg
+*.png
+
+# Zip archives (generated on release)
+*.zip
