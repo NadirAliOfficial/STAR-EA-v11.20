@@ -2660,7 +2660,7 @@ input bool            EA_EnableDrawdownProtection = true; // Enable Account Prot
 input double          EA_MaxDailyDrawdownPercent = 4.5;   // * v9.14 FIX#31: 3.8->8.0% -- 3.8% was blocking all trades after 3-4 SL hits at 1% risk. FIX#15 set 8% in code but input was never updated. For FTMO 5% daily limit: set to 4.5%.
 input double          EA_MaxWeeklyDrawdownPercent = 8.0; // * v9.03 FTMO: 15.0->8.0 (FTMO limit=10%, 8%=2% safety buffer. If Risk=5% restore to 15.0!)
 input double          EA_MaxTotalDrawdownPercent = 9.9;   // Max Total Drawdown (%) — * FIX#416: 9.5→9.9. Root: 9.5% fired after 2 months on legitimate compound growth (peak=$26829 from $25k). FTMO allows 10%; 9.9% gives real buffer without violation.
-input bool            EA_StopOnDrawdown = true;          // * v9.09 FIX#16: true->false -- pause signals instead of ExpertRemove() (which kills backtest entirely)
+input bool            EA_StopOnDrawdown = false;         // * v9.09 FIX#16 applied: default now false (pause + auto-resume). Set true for live FTMO accounts that require a hard permanent stop on drawdown breach.
 input bool            EA_EmailOnDrawdown = true;           // Email Alert on Drawdown
 input group "================ EA STOP LOSS & TAKE PROFIT ================"
 input double          EA_StopLossATR = 1.8;             // Stop Loss (x ATR) [v7.5b: 1.5->1.2 tighter SL for M5]
